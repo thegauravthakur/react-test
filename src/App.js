@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import Style from './App.module.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    curTime = new Date().toLocaleTimeString();
+    state = {
+        curTime: this.curTime,
+    }
+
+    render() {
+        this.curTime = new Date().toLocaleTimeString();
+        setInterval(() => (
+            this.setState(
+                {curTime: this.curTime}
+            )
+        ), 1000);
+        return (
+            <div className={Style.ClockDiv}>
+                <h1 className={Style.Heading}>{this.state.curTime}</h1>
+            </div>
+
+        )
+    }
 }
 
 export default App;
