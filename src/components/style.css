@@ -1,0 +1,54 @@
+body {
+    background-color: teal;
+}
+
+.outerDiv {
+    display: inline-block;
+    text-align: center;
+}
+
+.listTileDiv {
+    text-align: left;
+    color: white;
+    font-family: 'Merriweather', serif;
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 68px;
+    color: white;
+}
+
+.singleListTile {
+    padding: .1em;
+    background-color: lightslategray;
+    position: relative;
+
+}
+
+.specialBorder {
+    border-top: 3px solid white;
+
+}
+
+.center-vertically-img {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.center-vertically-index {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+img {
+    max-width: 80%;
+}
+
+.empty-message-div {
+    color: white;
+}
